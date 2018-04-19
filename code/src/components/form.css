@@ -1,0 +1,14 @@
+button {
+	background-color: hotpink;
+	border-radius: 10px;
+	color: white;
+	font-size: 35px;
+	margin: 10px;
+	text-shadow: 2px 2px black;
+}
+
+input {
+	font-size: 30px;
+	border-radius: 10px;
+	margin: 10px;
+}
