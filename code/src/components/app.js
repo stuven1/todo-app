@@ -6,10 +6,10 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     const toDoList = JSON.parse(localStorage.getItem("toDo"))
-    // getItem ligger i constructorn. Där sätts initalstate.
-    // Vid första render så visas endast array med items.
-    // Med vid uppdatering så sparas den nya "toDo" i localStorage.
-    // med hjälp utav -> localStorage.removeItem("toDo") kan localStorage återställas.
+    // getItem ligger i constructorn. Där sätts initalstate. //
+    // Vid första render så visas endast array med items. //
+    // Med vid uppdatering så sparas den nya "toDo" i localStorage. //
+    // med hjälp utav -> localStorage.removeItem("toDo") kan localStorage återställas. //
     if (toDoList) {
       this.state = { items: toDoList }
     } else {
@@ -24,8 +24,8 @@ class App extends React.Component {
 
 	handleNewToDo = (text) => {
 	  const toDos = this.state.items
-	  toDos.push({ id: Date.now(), done: false, text }) // Lägg in locale,storage innan nytt state
-	  localStorage.setItem("toDo", JSON.stringify(toDos))
+	  toDos.push({ id: Date.now(), done: false, text }) // Lägg till localeStorage innan nytt state. //
+	  localStorage.setItem("toDo", JSON.stringify(toDos)) // Hanterar arrayan toDos, sparas i localStorage.
 	  this.setState({
 	    items: toDos
 	  })
